@@ -1,0 +1,419 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #646cff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #646cff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(100, 108, 255, 0.1), rgba(83, 91, 242, 0.1));
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #646cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(100, 108, 255, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #535bf2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(100, 108, 255, 0.3);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #646cff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.portfolio-item p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+}
+
+/* Sobre Section */
+.sobre {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.sobre h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #646cff;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.sobre-texto p {
+    margin-bottom: 1.5rem;
+}
+
+.sobre-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contato Section */
+.contato {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.contato h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.contato h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #646cff;
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contato-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contato-detalhes {
+    margin-top: 2rem;
+}
+
+.contato-detalhes p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.contato-detalhes .social-links {
+    margin-top: 1.5rem;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+    outline: none;
+    border-color: #646cff;
+}
+
+.contato-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 1rem;
+    background-color: #646cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(100, 108, 255, 0.2);
+}
+
+.submit-button:hover {
+    background-color: #535bf2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(100, 108, 255, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.credits {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.credits a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits a:hover {
+    color: #007bff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .sobre-content,
+    .contato-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero,
+.portfolio,
+.sobre,
+.contato {
+    animation: fadeIn 1s ease-out;
+} 

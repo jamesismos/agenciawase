@@ -1,0 +1,10 @@
+{
+  "name": "agenciawase",
+  "version": "1.0.0",
+  "description": "Site da Agência Wase",
+  "scripts": {
+    "start": "npx serve"
+  },
+  "author": "",
+  "license": "ISC"
+} 
